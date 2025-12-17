@@ -21,6 +21,17 @@ The project is intentionally simple and dependency-free, focusing on correctness
 The tool extracts the YouTube video ID from user input and constructs a valid `/embed/VIDEO_ID` iframe.  
 All processing is done locally in the browser; no data is sent to any server.
 
+## Notes on ads and embedded playback
+During testing, embedded playback often results in significantly fewer ads, and in many cases no ads at all throughout the duration of the video.
+
+This behavior is controlled entirely by YouTube and depends on factors such as:
+- YouTube’s ad delivery policies for embedded players
+- The video’s monetization settings
+- Viewer context, region, and device
+- Browser privacy and tracking limitations inside iframes
+
+This project does not block ads and does not attempt to influence YouTube’s monetization logic. Ad behavior may vary across environments and over time.
+
 ## Running locally
 Recommended method:
 
